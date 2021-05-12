@@ -1,5 +1,5 @@
 {
-  "name": "cowin-pinger",
+  "name": "cowin-pinger-low-ping",
   "version": "1.0.1",
   "description": "Get notified on your phone when there is a vaccine slot available at your location, by running a script on your computer. Uses Cowin portal's public API.",
   "main": "app.js",

@@ -33,8 +33,8 @@ function checkParams() {
         } else if (!argv.district) {
             console.error('Please provide required district id by appending --district=<DISTRICT-ID> \nRefer documentation for more details');
             return;
-        } else if (argv.interval && argv.interval < 5) {
-            console.error('Please provide an interval greater than 5 minutes');
+        } else if (argv.interval && argv.interval < 0.1) {
+            console.error('Please provide an interval greater than 6 seconds');
             return;
         } else {
             // Required arguments provided through cli and checks passed
