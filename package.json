@@ -21,5 +21,14 @@
   "bin": {
     "cowin-pinger": "./app.js"
   },
-  "keywords": ["cowin", "covid", "vaccine", "notification", "notifier", "automation", "script", "ifttt"]
+  "keywords": [
+    "cowin",
+    "covid",
+    "vaccine",
+    "notification",
+    "notifier",
+    "automation",
+    "script",
+    "ifttt"
+  ]
 }

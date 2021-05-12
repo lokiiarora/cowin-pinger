@@ -90,7 +90,7 @@ function pingCowin({ key, hook, age, districtId, appointmentsListLimit, date }) 
                         isSlotAvailable = true
                         appointmentsAvailableCount++;
                         if (appointmentsAvailableCount <= appointmentsListLimit) {
-                            dataOfSlot = `${dataOfSlot}\nSlot for ${session.available_capacity} is available: ${center.name} on ${session.date}`;
+                            dataOfSlot = `${dataOfSlot}\nSlot for ${session.available_capacity} is available: ${center.name} on ${session.date} and pincode ${center.pincode}`;
                         }
                     }
                 }))
@@ -103,15 +103,15 @@ function pingCowin({ key, hook, age, districtId, appointmentsListLimit, date }) 
         if (isSlotAvailable) {
             if (hook && key) {
                 axios.post(`https://maker.ifttt.com/trigger/${hook}/with/key/${key}`, { value1: dataOfSlot }).then(() => {
-                    console.log('Sent Notification to Phone \nStopping Pinger...')
+                    console.log('Sent Notification to Phone ')
                     sound.play(notificationSound);
-                    clearInterval(timer);
+                    // clearInterval(timer);
                 });
             } else {
                 console.log(dataOfSlot);
-                console.log('Slots found\nStopping Pinger...')
+                console.log('Slots found')
                 sound.play(notificationSound);
-                clearInterval(timer);
+                // clearInterval(timer);
             }
         }
     }).catch((err) => {
